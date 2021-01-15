@@ -1,0 +1,356 @@
+/* цвет текста
+черный основной #212121
+белый #FFFFFF
+бледносерый добавочный #757575 
+акцентный голубой для текста и оформления #2196F3 
+цвета баннера и футера #2F303A
+для кнопок и секции светло серый #F5F4FA */
+/* нормалайз не дает нужного эффеккта по этому использую это html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+/* About all document */
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  padding-inline-start: 0px;
+}
+
+:root {
+  --accent-color: #2196f3;
+  --main-color: #212121;
+  --second-color: #757575;
+  --clean-color: #ffffff;
+  --dark-background: #2f303a;
+  --light-background: #f5f4fa;
+  --border-header: #ececec;
+  --border-gallery: #eeeeee;
+  --footer-link: rgba(255, 255, 255, 0.6);
+  --drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+body {
+  background-color: var(--clean-color);
+  color: var(--main-color);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* ширина общего контента */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+.web {
+  color: var(--accent-color);
+}
+
+.list {
+  list-style: none;
+  margin: 0px;
+}
+
+/* Header */
+.header {
+  padding: 25px 0px;
+  border-bottom: 1px solid var(--border-header);
+}
+
+.header-center {
+  align-items: center;
+}
+
+.logo {
+  color: var(--main-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+}
+
+.contacts .link,
+.contacts .link:visited {
+  color: var(--second-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.space:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts {
+  display: flex;
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  margin-left: 93px;
+  display: flex;
+}
+
+.site-nav .link,
+.site-nav .link:visited {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* section banner */
+.tagline {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clean-color);
+  width: 696px;
+  margin: 0 auto;
+}
+
+.banner-center {
+  text-align: center;
+}
+
+.banner {
+  padding: 200px 0px;
+  background-color: var(--dark-background);
+}
+
+.order {
+  color: var(--clean-color);
+  background-color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-top: 30px;
+}
+
+/* most sections */
+.section-padding {
+  padding: 94px 15px;
+}
+
+/* section our advantages */
+.advantages .advantages-about {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
+}
+
+.advantages .desc {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin: 0px;
+}
+
+.flex-advantages {
+  width: 270px;
+}
+
+/* section what we do */
+.section-whatwedo {
+  padding-bottom: 94px;
+}
+
+/* section our team */
+.ourteam {
+  background-color: var(--light-background);
+}
+
+.ourteam .heading-team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 30px 0px 10px 0px;
+}
+
+.ourteam .desc {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0px 0px 30px 0px;
+}
+
+.ourteam-back {
+  background: var(--clean-color);
+  width: 270px;
+  /* в макете стоит три тени - это немного странно - они действуют одновременно?зачем так? */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.ourteam-back:hover,
+.ourteam-back:focus {
+  filter: var(--drop-shadow);
+}
+
+/* other */
+.heading {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0px 0px 50px 0px;
+}
+
+.desc {
+  color: var(--second-color);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* section gallery */
+.gallery {
+  padding-bottom: 64px;
+}
+.flex-gallery {
+  display: flex;
+}
+.gallery .heading-gallery {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  padding: 20px 24px 4px 24px;
+  margin: 0px;
+}
+
+.gallery .desc {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  padding: 0px 24px;
+  padding-bottom: 20px;
+  margin: 0px;
+}
+
+.gallery-back {
+  width: 370px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+.gallery-back:nth-child(3n) {
+  margin-right: 0px;
+}
+.bordering {
+  border-bottom: 1px solid var(--border-gallery);
+  border-right: 1px solid var(--border-gallery);
+  border-left: 1px solid var(--border-gallery);
+}
+.img-gallery {
+  display: block;
+}
+/* buttons */
+.button {
+  color: var(--main-color);
+  background-color: var(--light-background);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 50px;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--clean-color);
+  background-color: var(--accent-color);
+  filter: var(--drop-shadow);
+}
+
+.flex-button {
+  display: flex;
+  justify-content: center;
+}
+
+.space-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* footer */
+.footer {
+  background-color: var(--dark-background);
+  padding: 60px 0px;
+}
+
+.footer .link {
+  color: var(--clean-color);
+}
+
+.address {
+  color: var(--clean-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  width: 231px;
+  margin-top: 20px;
+}
+
+.address .link,
+.address .link:visited {
+  color: var(--footer-link);
+  display: inline-block;
+  margin-top: 9px;
+}
