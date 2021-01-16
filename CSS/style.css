@@ -37,6 +37,7 @@ html {
   --icon-gray: #afb1b8;
   --ourteam-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --footer-icons: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -399,7 +400,8 @@ body {
   border-radius: 4px;
   fill: var(--icon-gray);
 }
-.logo-container:hover .logo-container:focus {
+.logo-container:hover,
+.logo-container:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -429,4 +431,44 @@ body {
   color: var(--footer-link);
   display: inline-block;
   margin-top: 9px;
+}
+.icon-footer-list {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--clean-color);
+  background-color: var(--footer-icons);
+  border-radius: 50%;
+}
+.icon-footer-list:hover,
+.icon-footer-list:focus {
+  background-color: var(--accent-color);
+}
+.footer-p {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--clean-color);
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.footer-space-icon {
+  margin-right: 10px;
+}
+
+.footer-space-icon:last-child {
+  margin-right: 0;
+}
+.footer-flex {
+  display: flex;
+}
+.footer-margin {
+  margin-left: 70px;
 }
