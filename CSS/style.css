@@ -186,6 +186,7 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
   margin-top: 30px;
+  box-shadow: var(--drop-shadow);
 }
 
 /* most sections */
@@ -254,7 +255,7 @@ body {
 }
 
 .ourteam-back {
-  background: var(--clean-color);
+  background-color: var(--clean-color);
   width: 270px;
   /* в макете стоит три тени - это немного странно - они действуют одновременно?зачем так? */
   box-shadow: var(--ourteam-shadow);
